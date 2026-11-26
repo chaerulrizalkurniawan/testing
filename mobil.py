@@ -21,16 +21,15 @@ class Mobil(Kendaraan):
     def get_transmisi(self):
         return self.__transmisi
 
-    # Method tambahan
+    # Method tambahan asuransi mobil: Rp25.000 per hari
     def hitung_asuransi(self, lama_hari):
-        """Asuransi mobil: Rp25.000 per hari."""
         return 25000 * lama_hari
 
-    # Override: biaya mobil = biaya dasar + asuransi
+    # Hitung biaya
     def hitung_biaya(self, lama_hari):
         return super().hitung_biaya(lama_hari) + self.hitung_asuransi(lama_hari)
 
-    # Override: tampilkan info tambahan mobil
+    # Tampilkan info tambahan
     def info(self):
         return (f"MOBIL | {super().info()} | "
                 f"{self.__jumlah_kursi} kursi | {self.__transmisi}")
