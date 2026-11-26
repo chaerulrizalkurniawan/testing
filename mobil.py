@@ -1,5 +1,4 @@
 # ==========================================================
-# mobil.py
 # Subclass Mobil (extends Kendaraan)
 # ==========================================================
 from kendaraan import Kendaraan
